@@ -47,6 +47,11 @@ a {
   text-decoration: none;
 }
 
+/* #resume-size{
+  width: 100%;
+  height: 100%;
+} */
+
 .circle-ul{
   list-style-type: circle;
   margin-left: 10px;

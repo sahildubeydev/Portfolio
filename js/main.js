@@ -1,9 +1,11 @@
 const about = document.querySelector("#about");
 const contact = document.querySelector("#contact");
 const programming = document.querySelector("#programming");
+const resume = document.querySelector("#resume");
 const aboutContent = document.querySelector("#about-content");
 const contactContent = document.querySelector("#contact-content");
 const programmingContent = document.querySelector("#programming-content");
+const resumeContent = document.querySelector("#resume-content");
 
 about.addEventListener("click", () => {
   const aboutBox = new WinBox({
@@ -16,6 +18,26 @@ about.addEventListener("click", () => {
     bottom: 50,
     left: 50,
     mount: aboutContent,
+    onfocus: function () {
+      this.setBackground("#F80");
+    },
+    onblur: function () {
+      this.setBackground("#777");
+    },
+  });
+});
+
+contact.addEventListener("click", () => {
+  const contactBox = new WinBox({
+    title: "Contact Me",
+    background: "#00aa00",
+    width: "400px",
+    height: "400px",
+    top: 100,
+    right: 50,
+    bottom: 50,
+    left: 250,
+    mount: contactContent,
     onfocus: function () {
       this.setBackground("#F80");
     },
@@ -45,17 +67,12 @@ programming.addEventListener("click", () => {
   });
 });
 
-contact.addEventListener("click", () => {
-  const contactBox = new WinBox({
-    title: "Contact Me",
-    background: "#00aa00",
-    width: "400px",
-    height: "400px",
-    top: 100,
-    right: 50,
-    bottom: 50,
-    left: 250,
-    mount: contactContent,
+resume.addEventListener("click", () => {
+  const resumeBox = new WinBox({
+    title: "My Resume",
+    width: "750px",
+    height: "750px",
+    mount: resumeContent,
     onfocus: function () {
       this.setBackground("#F80");
     },
