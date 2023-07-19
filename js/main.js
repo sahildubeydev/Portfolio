@@ -1,12 +1,14 @@
 const about = document.querySelector("#about");
 const contact = document.querySelector("#contact");
+const programming = document.querySelector("#programming");
 const aboutContent = document.querySelector("#about-content");
 const contactContent = document.querySelector("#contact-content");
+const programmingContent = document.querySelector("#programming-content");
 
 about.addEventListener("click", () => {
   const aboutBox = new WinBox({
     title: "About Me",
-    //modal: true,
+    // modal: true,
     width: "400px",
     height: "400px",
     top: 50,
@@ -23,13 +25,33 @@ about.addEventListener("click", () => {
   });
 });
 
+programming.addEventListener("click", () => {
+  const programmingBox = new WinBox({
+    title: "My Skills",
+    //modal: true,
+    width: "400px",
+    height: "400px",
+    top: 150,
+    right: 50,
+    bottom: 50,
+    left: 50,
+    mount: programmingContent,
+    onfocus: function () {
+      this.setBackground("#F80");
+    },
+    onblur: function () {
+      this.setBackground("#777");
+    },
+  });
+});
+
 contact.addEventListener("click", () => {
   const contactBox = new WinBox({
     title: "Contact Me",
     background: "#00aa00",
     width: "400px",
     height: "400px",
-    top: 150,
+    top: 100,
     right: 50,
     bottom: 50,
     left: 250,
