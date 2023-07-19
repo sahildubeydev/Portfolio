@@ -34,9 +34,9 @@ contact.addEventListener("click", () => {
     width: "400px",
     height: "400px",
     top: 100,
-    right: 50,
+    right: 100,
     bottom: 50,
-    left: 250,
+    left: 100,
     mount: contactContent,
     onfocus: function () {
       this.setBackground("#F80");
@@ -54,9 +54,9 @@ programming.addEventListener("click", () => {
     width: "400px",
     height: "400px",
     top: 150,
-    right: 50,
+    right: 150,
     bottom: 50,
-    left: 50,
+    left: 150,
     mount: programmingContent,
     onfocus: function () {
       this.setBackground("#F80");
