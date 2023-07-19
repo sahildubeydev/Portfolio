@@ -15,7 +15,7 @@ about.addEventListener("click", () => {
     left: 50,
     mount: aboutContent,
     onfocus: function () {
-      this.setBackground("#00aa00");
+      this.setBackground("#F80");
     },
     onblur: function () {
       this.setBackground("#777");
@@ -35,7 +35,7 @@ contact.addEventListener("click", () => {
     left: 250,
     mount: contactContent,
     onfocus: function () {
-      this.setBackground("#00aa00");
+      this.setBackground("#F80");
     },
     onblur: function () {
       this.setBackground("#777");
@@ -64,7 +64,7 @@ $.fn.typewriter = function () {
         else for (; ">" != b.substring(a, a + 1); ) a++;
       }
       c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
-      a >= b.length || setTimeout(e, 70 + 100 * Math.random());
+      a >= b.length || setTimeout(e, 50 + 8 * Math.random());
     };
     e();
   });
