@@ -81,7 +81,6 @@ nav ul li {
 }
 
 .container { 
-  /* background-color: grey; */
   max-width: 1000px;
   margin: auto;
   height: 100vh;
@@ -98,7 +97,7 @@ nav ul li {
 }
 
 .winbox {
-  background: linear-gradient(90deg, #FA5, #F80);
+  background: linear-gradient(to right, #FA5, #F80);
   border-radius: 12px 12px 0 0;
   box-shadow: none;
 }
@@ -171,3 +170,12 @@ footer {
   content: '$';
   color: #FDA;
 }
+
+
+/* @media only screen and (max-width: 500px) {
+  
+  .container nav ul{
+    display: grid;
+  }
+  
+} */
