@@ -18,19 +18,18 @@ about.addEventListener("click", () => {
     bottom: 50,
     left: 50,
     mount: aboutContent,
-    onfocus: function () {
-      this.setBackground("#F80");
-    },
-    onblur: function () {
-      this.setBackground("#777");
-    },
+    // onfocus: function () {
+    //   this.setBackground("#F80");
+    // },
+    // onblur: function () {
+    //   this.setBackground("#777");
+    // },
   });
 });
 
 contact.addEventListener("click", () => {
   const contactBox = new WinBox({
     title: "Contact Me",
-    background: "#00aa00",
     width: "400px",
     height: "400px",
     top: 100,
@@ -38,12 +37,12 @@ contact.addEventListener("click", () => {
     bottom: 50,
     left: 100,
     mount: contactContent,
-    onfocus: function () {
-      this.setBackground("#F80");
-    },
-    onblur: function () {
-      this.setBackground("#777");
-    },
+    // onfocus: function () {
+    //   this.setBackground("#F80");
+    // },
+    // onblur: function () {
+    //   this.setBackground("#777");
+    // },
   });
 });
 
@@ -58,12 +57,12 @@ programming.addEventListener("click", () => {
     bottom: 50,
     left: 150,
     mount: programmingContent,
-    onfocus: function () {
-      this.setBackground("#F80");
-    },
-    onblur: function () {
-      this.setBackground("#777");
-    },
+    // onfocus: function () {
+    //   this.setBackground("#F80");
+    // },
+    // onblur: function () {
+    //   this.setBackground("#777");
+    // },
   });
 });
 
@@ -73,12 +72,12 @@ resume.addEventListener("click", () => {
     width: "750px",
     height: "750px",
     mount: resumeContent,
-    onfocus: function () {
-      this.setBackground("#F80");
-    },
-    onblur: function () {
-      this.setBackground("#777");
-    },
+    // onfocus: function () {
+    //   this.setBackground("#F80");
+    // },
+    // onblur: function () {
+    //   this.setBackground("#777");
+    // },
   });
 });
 
@@ -103,7 +102,7 @@ $.fn.typewriter = function () {
         else for (; ">" != b.substring(a, a + 1); ) a++;
       }
       c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
-      a >= b.length || setTimeout(e, 50 + 8 * Math.random());
+      a >= b.length || setTimeout(e, 45 + 5 * Math.random());
     };
     e();
   });
