@@ -6,11 +6,53 @@ const aboutContent = document.querySelector("#about-content");
 const contactContent = document.querySelector("#contact-content");
 const programmingContent = document.querySelector("#programming-content");
 const resumeContent = document.querySelector("#resume-content");
+const contactAudio = document.getElementById("contactAudio");
+const contactPlayPauseBtn = document.getElementById("contactPlayPauseBtn");
+const aboutAudio = document.getElementById("aboutAudio");
+const aboutPlayPauseBtn = document.getElementById("aboutPlayPauseBtn");
+
+// contact audio
+let contactPlaying = false;
+function contactToggleAudio() {
+  if (contactPlaying) {
+    contactAudio.pause();
+    contactPlaying = false;
+    contactPlayPauseBtn.src = "./assets/cute.gif"; // Change to the play icon
+  } else {
+    contactAudio.play();
+    contactPlaying = true;
+    contactPlayPauseBtn.src = "./assets/cd.gif"; // Change to the pause icon
+  }
+}
+// Add a click event listener to the GIF to trigger the toggleAudio function
+contactPlayPauseBtn.addEventListener("click", contactToggleAudio);
+
+// about audio
+let aboutPlaying = false;
+function aboutToggleAudio() {
+  if (aboutPlaying) {
+    aboutAudio.pause();
+    aboutPlaying = false;
+    aboutPlayPauseBtn.src = "./assets/feather.gif"; // Change to the play icon
+  } else {
+    aboutAudio.play();
+    aboutPlaying = true;
+    aboutPlayPauseBtn.src = "./assets/flute.gif"; // Change to the pause icon
+  }
+}
+// Add a click event listener to the GIF to trigger the toggleAudio function
+aboutPlayPauseBtn.addEventListener("click", aboutToggleAudio);
+
+// Linear gradient property
+const gradientDirection = "to right";
+const colorStops = "#FA5, #F80";
+const linearGradient = `linear-gradient(${gradientDirection}, ${colorStops})`;
+const blurColor = "#777";
 
 about.addEventListener("click", () => {
   const aboutBox = new WinBox({
     title: "About Me",
-    // modal: true,
+    icon: "assets/about-me.gif",
     width: "400px",
     height: "400px",
     top: 50,
@@ -18,18 +60,19 @@ about.addEventListener("click", () => {
     bottom: 50,
     left: 50,
     mount: aboutContent,
-    // onfocus: function () {
-    //   this.setBackground("#F80");
-    // },
-    // onblur: function () {
-    //   this.setBackground("#777");
-    // },
+    onfocus: function () {
+      this.setBackground(linearGradient);
+    },
+    onblur: function () {
+      this.setBackground(blurColor);
+    },
   });
 });
 
 contact.addEventListener("click", () => {
   const contactBox = new WinBox({
     title: "Contact Me",
+    icon: "./assets/contact.gif",
     width: "400px",
     height: "400px",
     top: 100,
@@ -37,19 +80,19 @@ contact.addEventListener("click", () => {
     bottom: 50,
     left: 100,
     mount: contactContent,
-    // onfocus: function () {
-    //   this.setBackground("#F80");
-    // },
-    // onblur: function () {
-    //   this.setBackground("#777");
-    // },
+    onfocus: function () {
+      this.setBackground(linearGradient);
+    },
+    onblur: function () {
+      this.setBackground(blurColor);
+    },
   });
 });
 
 programming.addEventListener("click", () => {
   const programmingBox = new WinBox({
     title: "My Skills",
-    //modal: true,
+    icon: "./assets/tech-stack.gif",
     width: "400px",
     height: "400px",
     top: 150,
@@ -57,27 +100,28 @@ programming.addEventListener("click", () => {
     bottom: 50,
     left: 150,
     mount: programmingContent,
-    // onfocus: function () {
-    //   this.setBackground("#F80");
-    // },
-    // onblur: function () {
-    //   this.setBackground("#777");
-    // },
+    onfocus: function () {
+      this.setBackground(linearGradient);
+    },
+    onblur: function () {
+      this.setBackground(blurColor);
+    },
   });
 });
 
 resume.addEventListener("click", () => {
   const resumeBox = new WinBox({
     title: "My Resume",
-    width: "750px",
+    icon: "./assets/cv.gif",
+    width: "525px",
     height: "750px",
     mount: resumeContent,
-    // onfocus: function () {
-    //   this.setBackground("#F80");
-    // },
-    // onblur: function () {
-    //   this.setBackground("#777");
-    // },
+    onfocus: function () {
+      this.setBackground(linearGradient);
+    },
+    onblur: function () {
+      this.setBackground(blurColor);
+    },
   });
 });
 
